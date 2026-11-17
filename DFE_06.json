@@ -277,7 +277,7 @@
           "unit": 1
         }
       ],
-      "position": [-0.244, 0.369, 0.114],
+      "position": [-870, 0, 0],
       "rotation": [0, 0, 0],
       "placementRelTo": "building",
       "statechart": {
