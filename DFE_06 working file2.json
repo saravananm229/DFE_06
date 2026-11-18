@@ -99,8 +99,8 @@
           "unit": 1
         }
       ],
-      "position": [-1087, 0, 1028.81],
-      "rotation": [0, 0, 0],
+      "position": [-1119, 0, 858.27],
+      "rotation": [0, 87.46, 0],
       "placementRelTo": "building",
       "properties": {
         "mass":  0,
@@ -155,8 +155,8 @@
           "unit": 1
         }
       ],
-      "position": [1000, 0, 0],
-      "rotation": [0, 0, 0],
+      "position": [-2203.64, 0, -97.75],
+      "rotation": [0, -0.92, 0],
       "placementRelTo": "building",
       "properties": {
         "mass":  0,
@@ -391,8 +391,8 @@
           "unit": 1
         }
       ],
-      "position": [-870, 0, 0],
-      "rotation": [0, 0, 0],
+      "position": [-173.47, 0, 846.80],
+      "rotation": [0, 86.47, 0],
       "placementRelTo": "building",
       "statechart": {
                          "id":  "PP_SC",
