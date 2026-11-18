@@ -1,0 +1,157 @@
+{
+  "context": {
+    "assetTrail": false,
+    "UnitOfMeasureScale": 0.001,
+    "Zup": false,
+    "RepoAnim": ""
+  },
+  "nodes": [
+    {
+      "id": "B1",
+      "actions": [
+        {
+          "trigger": {
+            "type": "timestamp",
+            "data": "1000"
+          },
+          "event": {
+            "type": "sendEvent",
+            "data": "B1startF"
+          }
+        },
+        {
+          "trigger": {
+            "type": "timestamp",
+            "data": "90000"
+          },
+          "event": {
+            "type": "sendEvent",
+            "data": "B1stop"
+          }
+        }
+      ]
+    },
+    {
+      "id": "B2",
+      "actions": [
+        {
+          "trigger": {
+            "type": "timestamp",
+            "data": "2000"
+          },
+          "event": {
+            "type": "sendEvent",
+            "data": "B2startF"
+          }
+        },
+        {
+          "trigger": {
+            "type": "timestamp",
+            "data": "90000"
+          },
+          "event": {
+            "type": "sendEvent",
+            "data": "B2stop"
+          }
+        }
+      ]
+    },
+    {
+      "id": "B3",
+      "actions": [
+        {
+          "trigger": {
+            "type": "timestamp",
+            "data": "3000"
+          },
+          "event": {
+            "type": "sendEvent",
+            "data": "B3startF"
+          }
+        },
+        {
+          "trigger": {
+            "type": "timestamp",
+            "data": "90000"
+          },
+          "event": {
+            "type": "sendEvent",
+            "data": "B3stop"
+          }
+        }
+      ]
+    },
+    {
+      "id": "PP",
+      "actions": [
+        {
+          "trigger": {
+            "type": "timestamp",
+            "data": "5000"
+          },
+          "event": {
+            "type": "sendEvent",
+            "data": "goPick"
+          }
+        },
+        {
+          "trigger": {
+            "type": "timestamp",
+            "data": "10000"
+          },
+          "event": {
+            "type": "sendEvent",
+            "data": "goPlace"
+          }
+        },
+        {
+          "trigger": {
+            "type": "timestamp",
+            "data": "15000"
+          },
+          "event": {
+            "type": "sendEvent",
+            "data": "goRest"
+          }
+        }
+      ]
+    },
+    {
+      "id": "PP2",
+      "actions": [
+        {
+          "trigger": {
+            "type": "timestamp",
+            "data": "20000"
+          },
+          "event": {
+            "type": "sendEvent",
+            "data": "goPick"
+          }
+        },
+        {
+          "trigger": {
+            "type": "timestamp",
+            "data": "25000"
+          },
+          "event": {
+            "type": "sendEvent",
+            "data": "goPlace"
+          }
+        },
+        {
+          "trigger": {
+            "type": "timestamp",
+            "data": "30000"
+          },
+          "event": {
+            "type": "sendEvent",
+            "data": "goRest"
+          }
+        }
+      ]
+    }
+  ],
+  "sequences": [],
+  "bookmarks": []
+}
