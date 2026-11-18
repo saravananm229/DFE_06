@@ -155,8 +155,8 @@
           "unit": 1
         }
       ],
-      "position": [-2203.64, 0, -97.75],
-      "rotation": [0, -0.92, 0],
+      "position": [-2203,64, 0, -97.75],
+      "rotation": [0, -0,92, 0],
       "placementRelTo": "building",
       "properties": {
         "mass":  0,
