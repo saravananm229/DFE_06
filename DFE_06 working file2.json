@@ -155,7 +155,7 @@
           "unit": 1
         }
       ],
-      "position": [100, 100, 0],
+      "position": [1000, 0, 0],
       "rotation": [0, 0, 0],
       "placementRelTo": "building",
       "properties": {
@@ -165,37 +165,37 @@
          "MotionType":  "ANIMATED"
       },
       "statechart": {
-                         "id":  "B2_SC",
+                         "id":  "B3_SC",
                          "initial":  "idle",
                          "states":  {
                                "idle":  {
                                      "on":  {
-                                           "B2startF":  "forward",
-                            "B2startB":  "backward"                         
+                                           "B3startF":  "forward",
+                            "B3startB":  "backward"                         
             },
                                      "entry":  {
                                            "action":  "surfaceVelocity",
-                                           "target":  "B2",
+                                           "target":  "B3",
                                            "velocity":  [0, 0, 0]                         
             }                     
           },
                                "forward":  {
                                      "on":  {
-                                           "B2stop":  "idle"                         
+                                           "B3stop":  "idle"                         
             },
                                      "entry":  {
                                            "action":  "surfaceVelocity",
-                                           "target":  "B2",
+                                           "target":  "B3",
                                            "velocity":  [0, 0, 80]                         
             }                     
           },
                                "backward":  {
                                      "on":  {
-                                           "B2stop":  "idle"                         
+                                           "B3stop":  "idle"                         
             },
                                      "entry":  {
                                            "action":  "surfaceVelocity",
-                                           "target":  "B2",
+                                           "target":  "B3",
                                            "velocity":  [0, 0, -80]                         
             }                     
           }                 
