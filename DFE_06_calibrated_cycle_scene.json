@@ -141,7 +141,7 @@
       ],
       "rotation": [
         0,
-        1.5359,
+        1.5707963267948966,
         0
       ],
       "placementRelTo": "building",
@@ -376,7 +376,8 @@
       "properties": {
         "mass": 1,
         "restitution": 0.1,
-        "friction": 0.95
+        "friction": 0.95,
+        "MotionType": "ANIMATED"
       }
     },
     {
@@ -402,7 +403,8 @@
       "properties": {
         "mass": 1,
         "restitution": 0.1,
-        "friction": 0.95
+        "friction": 0.95,
+        "MotionType": "ANIMATED"
       }
     },
     {
@@ -428,7 +430,8 @@
       "properties": {
         "mass": 1,
         "restitution": 0.1,
-        "friction": 0.95
+        "friction": 0.95,
+        "MotionType": "ANIMATED"
       }
     },
     {
@@ -454,7 +457,8 @@
       "properties": {
         "mass": 1,
         "restitution": 0.1,
-        "friction": 0.96
+        "friction": 0.96,
+        "MotionType": "ANIMATED"
       }
     },
     {
@@ -480,7 +484,8 @@
       "properties": {
         "mass": 1,
         "restitution": 0.1,
-        "friction": 0.97
+        "friction": 0.97,
+        "MotionType": "ANIMATED"
       }
     },
     {
@@ -506,7 +511,8 @@
       "properties": {
         "mass": 1,
         "restitution": 0.1,
-        "friction": 0.98
+        "friction": 0.98,
+        "MotionType": "ANIMATED"
       }
     },
     {
@@ -532,7 +538,8 @@
       "properties": {
         "mass": 1,
         "restitution": 0.1,
-        "friction": 0.99
+        "friction": 0.99,
+        "MotionType": "ANIMATED"
       }
     },
     {
@@ -558,7 +565,8 @@
       "properties": {
         "mass": 1,
         "restitution": 0.1,
-        "friction": 0.1
+        "friction": 0.1,
+        "MotionType": "ANIMATED"
       }
     },
     {
@@ -584,7 +592,8 @@
       "properties": {
         "mass": 1,
         "restitution": 0.1,
-        "friction": 0.101
+        "friction": 0.101,
+        "MotionType": "ANIMATED"
       }
     },
     {
@@ -610,7 +619,8 @@
       "properties": {
         "mass": 1,
         "restitution": 0.1,
-        "friction": 0.95
+        "friction": 0.95,
+        "MotionType": "ANIMATED"
       }
     },
     {
@@ -931,9 +941,9 @@
                 "action": "moveTo",
                 "target": "PP2.FloatingZ",
                 "position": [
-                  -120.92,
+                  -108.92,
                   80,
-                  -72.71
+                  -168.71
                 ],
                 "delay": 1000
               },
