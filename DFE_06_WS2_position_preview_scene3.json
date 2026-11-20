@@ -1112,9 +1112,9 @@
         }
       ],
       "position": [
-        -1994.01,
+        -1984.07,
         0,
-        -2971.62
+        -2545.7
       ],
       "rotation": [
         0,
@@ -1162,9 +1162,9 @@
                 "action": "moveTo",
                 "target": "PP3.FloatingZ",
                 "position": [
-                  -120.92,
-                  80,
-                  -72.714
+                  -109.2065603563,
+                  80.000359,
+                  -68.3089293458
                 ],
                 "delay": 1000
               },
@@ -1414,17 +1414,17 @@
         }
       ],
       "position": [
-        -2250.0,
+        -2539.61,
         0.0,
-        -2600.0
+        -2566.9
       ],
       "placementRelTo": "building",
       "rotation": [
         0,
-        0,
+        -1.57673,
         0
       ],
-      "descr": "Candidate 6-axis WS2 station placement preview; not animated."
+      "descr": "WS2 six-axis transfer preview alongside PP3."
     },
     {
       "id": "WS2.base",
