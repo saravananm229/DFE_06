@@ -931,9 +931,9 @@
                 "action": "moveTo",
                 "target": "PP2.FloatingZ",
                 "position": [
-                  -50.025,
+                  -114.954,
                   80,
-                  -228.781
+                  -229.19
                 ],
                 "delay": 1000
               },
@@ -1409,7 +1409,7 @@
       "type": "https://w3id.org/ontoeng/factory#MachineTool",
       "representations": [
         {
-          "file": "UR_Pick_and_Place_Station.glb",
+          "file": "../AssemblyLine/GLB/UR_Pick_and_Place_Station.glb",
           "unit": 10
         }
       ],
@@ -1431,7 +1431,7 @@
       "type": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL#IfcElementAssembly",
       "representations": [
         {
-          "file": "UR_Pick_and_Place_Station.glb#URbase",
+          "file": "../AssemblyLine/GLB/UR_Pick_and_Place_Station.glb#URbase",
           "unit": 10
         }
       ],
@@ -1448,7 +1448,7 @@
       "type": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL#IfcElementAssembly",
       "representations": [
         {
-          "file": "UR_Pick_and_Place_Station.glb#URjoint1",
+          "file": "../AssemblyLine/GLB/UR_Pick_and_Place_Station.glb#URjoint1",
           "unit": 10
         }
       ],
@@ -1470,7 +1470,7 @@
       "type": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL#IfcElementAssembly",
       "representations": [
         {
-          "file": "UR_Pick_and_Place_Station.glb#URjoint2",
+          "file": "../AssemblyLine/GLB/UR_Pick_and_Place_Station.glb#URjoint2",
           "unit": 10
         }
       ],
@@ -1492,7 +1492,7 @@
       "type": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL#IfcElementAssembly",
       "representations": [
         {
-          "file": "UR_Pick_and_Place_Station.glb#URjoint3",
+          "file": "../AssemblyLine/GLB/UR_Pick_and_Place_Station.glb#URjoint3",
           "unit": 10
         }
       ],
@@ -1514,7 +1514,7 @@
       "type": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL#IfcElementAssembly",
       "representations": [
         {
-          "file": "UR_Pick_and_Place_Station.glb#URjoint4",
+          "file": "../AssemblyLine/GLB/UR_Pick_and_Place_Station.glb#URjoint4",
           "unit": 10
         }
       ],
@@ -1536,7 +1536,7 @@
       "type": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL#IfcElementAssembly",
       "representations": [
         {
-          "file": "UR_Pick_and_Place_Station.glb#URjoint5",
+          "file": "../AssemblyLine/GLB/UR_Pick_and_Place_Station.glb#URjoint5",
           "unit": 10
         }
       ],
@@ -1558,7 +1558,7 @@
       "type": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL#IfcElementAssembly",
       "representations": [
         {
-          "file": "UR_Pick_and_Place_Station.glb#URjoint6",
+          "file": "../AssemblyLine/GLB/UR_Pick_and_Place_Station.glb#URjoint6",
           "unit": 10
         }
       ],
@@ -1580,7 +1580,7 @@
       "type": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL#IfcElementAssembly",
       "representations": [
         {
-          "file": "UR_Pick_and_Place_Station.glb#UREndEffector",
+          "file": "../AssemblyLine/GLB/UR_Pick_and_Place_Station.glb#UREndEffector",
           "unit": 10
         }
       ],
@@ -1597,7 +1597,7 @@
       "type": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL#IfcElementAssembly",
       "representations": [
         {
-          "file": "UR_Pick_and_Place_Station.glb#URgripper1",
+          "file": "../AssemblyLine/GLB/UR_Pick_and_Place_Station.glb#URgripper1",
           "unit": 10
         }
       ],
@@ -1614,7 +1614,7 @@
       "type": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL#IfcElementAssembly",
       "representations": [
         {
-          "file": "UR_Pick_and_Place_Station.glb#URgripper2",
+          "file": "../AssemblyLine/GLB/UR_Pick_and_Place_Station.glb#URgripper2",
           "unit": 10
         }
       ],
@@ -1647,7 +1647,7 @@
       "type": "https://w3id.org/ontoeng/factory#Conveyor",
       "representations": [
         {
-          "file": "UR_Pick_and_Place_Station.glb#Conveyor_Main",
+          "file": "../AssemblyLine/GLB/UR_Pick_and_Place_Station.glb#Conveyor_Main",
           "unit": 10
         }
       ],
@@ -1675,7 +1675,7 @@
       "type": "https://w3id.org/ontoeng/factory#Robot",
       "representations": [
         {
-          "file": "UR_Pick_and_Place_Station.glb#URPPs_Robot",
+          "file": "../AssemblyLine/GLB/UR_Pick_and_Place_Station.glb#URPPs_Robot",
           "unit": 10
         }
       ],
