@@ -1,0 +1,398 @@
+{
+  "context": {
+    "UnitOfMeasureScale": 0.001,
+    "Zup": false,
+    "RepoPath": ""
+  },
+  "scene": [
+    "building",
+    "WS2",
+    "WS2.Robot",
+    "WS2.base",
+    "WS2.link1",
+    "WS2.link2",
+    "WS2.link3",
+    "WS2.link4",
+    "WS2.link5",
+    "WS2.link6",
+    "WS2.EndEffector",
+    "WS2.Gripper1",
+    "WS2.Gripper2",
+    "WS2.Workholding",
+    "WS2.Conveyor",
+    "WS2.PalletPosition",
+    "WS2TestBox",
+    "WS2TestPart"
+  ],
+  "assets": [
+    {
+      "id": "building",
+      "type": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL#IfcBuilding"
+    },
+    {
+      "id": "WS2",
+      "type": "https://w3id.org/ontoeng/factory#MachineTool",
+      "representations": [
+        {
+          "file": "../AssemblyLine/GLB/UR_Pick_and_Place_Station.glb",
+          "unit": 1
+        }
+      ],
+      "position": [
+        -2539.61,
+        0,
+        -2566.9
+      ],
+      "placementRelTo": "building",
+      "rotation": [
+        0,
+        -1.5767,
+        0
+      ],
+      "descr": "WS2 isolated linked pick-and-place test; lift target Y=350 mm."
+    },
+    {
+      "id": "WS2.Robot",
+      "type": "https://w3id.org/ontoeng/factory#Robot",
+      "representations": [
+        {
+          "file": "../AssemblyLine/GLB/UR_Pick_and_Place_Station.glb#URPPs_Robot",
+          "unit": 1
+        }
+      ],
+      "position": [
+        -330.0,
+        0.0,
+        12.5
+      ],
+      "placementRelTo": "WS2",
+      "parentObject": "WS2"
+    },
+    {
+      "id": "WS2.base",
+      "type": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL#IfcElementAssembly",
+      "representations": [
+        {
+          "file": "../AssemblyLine/GLB/UR_Pick_and_Place_Station.glb#URbase",
+          "unit": 1
+        }
+      ],
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "placementRelTo": "WS2.Robot",
+      "parentObject": "WS2.Robot"
+    },
+    {
+      "id": "WS2.link1",
+      "type": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL#IfcElementAssembly",
+      "representations": [
+        {
+          "file": "../AssemblyLine/GLB/UR_Pick_and_Place_Station.glb#URjoint1",
+          "unit": 1
+        }
+      ],
+      "position": [
+        0.0,
+        86.05,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.556,
+        0.0
+      ],
+      "placementRelTo": "WS2.base",
+      "parentObject": "WS2.base"
+    },
+    {
+      "id": "WS2.link2",
+      "type": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL#IfcElementAssembly",
+      "representations": [
+        {
+          "file": "../AssemblyLine/GLB/UR_Pick_and_Place_Station.glb#URjoint2",
+          "unit": 1
+        }
+      ],
+      "position": [
+        0.0,
+        65.85,
+        54.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        -0.78
+      ],
+      "placementRelTo": "WS2.link1",
+      "parentObject": "WS2.link1"
+    },
+    {
+      "id": "WS2.link3",
+      "type": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL#IfcElementAssembly",
+      "representations": [
+        {
+          "file": "../AssemblyLine/GLB/UR_Pick_and_Place_Station.glb#URjoint3",
+          "unit": 1
+        }
+      ],
+      "position": [
+        0.0,
+        243.65,
+        23.6
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.482
+      ],
+      "placementRelTo": "WS2.link2",
+      "parentObject": "WS2.link2"
+    },
+    {
+      "id": "WS2.link4",
+      "type": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL#IfcElementAssembly",
+      "representations": [
+        {
+          "file": "../AssemblyLine/GLB/UR_Pick_and_Place_Station.glb#URjoint4",
+          "unit": 1
+        }
+      ],
+      "position": [
+        0.0,
+        213.0,
+        -8.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        -1.272
+      ],
+      "placementRelTo": "WS2.link3",
+      "parentObject": "WS2.link3"
+    },
+    {
+      "id": "WS2.link5",
+      "type": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL#IfcElementAssembly",
+      "representations": [
+        {
+          "file": "../AssemblyLine/GLB/UR_Pick_and_Place_Station.glb#URjoint5",
+          "unit": 1
+        }
+      ],
+      "position": [
+        0.0,
+        42.6,
+        40.8
+      ],
+      "rotation": [
+        0.0,
+        1.571,
+        0.0
+      ],
+      "placementRelTo": "WS2.link4",
+      "parentObject": "WS2.link4"
+    },
+    {
+      "id": "WS2.link6",
+      "type": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL#IfcElementAssembly",
+      "representations": [
+        {
+          "file": "../AssemblyLine/GLB/UR_Pick_and_Place_Station.glb#URjoint6",
+          "unit": 1
+        }
+      ],
+      "position": [
+        0.0,
+        40.8,
+        42.6
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.55
+      ],
+      "placementRelTo": "WS2.link5",
+      "parentObject": "WS2.link5"
+    },
+    {
+      "id": "WS2.EndEffector",
+      "type": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL#IfcElementAssembly",
+      "representations": [
+        {
+          "file": "../AssemblyLine/GLB/UR_Pick_and_Place_Station.glb#UREndEffector",
+          "unit": 1
+        }
+      ],
+      "position": [
+        0.0,
+        0.0,
+        38.0
+      ],
+      "placementRelTo": "WS2.link6",
+      "parentObject": "WS2.link6"
+    },
+    {
+      "id": "WS2.Gripper1",
+      "type": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL#IfcElementAssembly",
+      "representations": [
+        {
+          "file": "../AssemblyLine/GLB/UR_Pick_and_Place_Station.glb#URgripper1",
+          "unit": 1
+        }
+      ],
+      "position": [
+        0,
+        -36.5,
+        45
+      ],
+      "placementRelTo": "WS2.EndEffector",
+      "parentObject": "WS2.EndEffector"
+    },
+    {
+      "id": "WS2.Gripper2",
+      "type": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL#IfcElementAssembly",
+      "representations": [
+        {
+          "file": "../AssemblyLine/GLB/UR_Pick_and_Place_Station.glb#URgripper2",
+          "unit": 1
+        }
+      ],
+      "position": [
+        0,
+        40.5,
+        45
+      ],
+      "placementRelTo": "WS2.EndEffector",
+      "parentObject": "WS2.EndEffector"
+    },
+    {
+      "id": "WS2.Workholding",
+      "type": "https://w3id.org/ontoeng/factory#WorkholdingPosition",
+      "position": [
+        -5.85,
+        2.0,
+        98.0
+      ],
+      "rotation": [
+        -1.5707963267948966,
+        0,
+        0
+      ],
+      "placementRelTo": "WS2.EndEffector",
+      "parentObject": "WS2.EndEffector"
+    },
+    {
+      "id": "WS2.Conveyor",
+      "type": "https://w3id.org/ontoeng/factory#Conveyor",
+      "representations": [
+        {
+          "file": "../AssemblyLine/GLB/UR_Pick_and_Place_Station.glb#Conveyor_Main",
+          "unit": 1
+        }
+      ],
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "placementRelTo": "WS2",
+      "parentObject": "WS2"
+    },
+    {
+      "id": "WS2.PalletPosition",
+      "type": "https://w3id.org/ontoeng/factory#PalletPosition",
+      "position": [
+        0.0,
+        230.0,
+        -55.55
+      ],
+      "placementRelTo": "WS2.Conveyor",
+      "parentObject": "WS2.Conveyor"
+    },
+    {
+      "id": "WS2TestBox",
+      "type": "https://w3id.org/ontoeng/factory#Artifact",
+      "representations": [
+        {
+          "file": "Box_large.glb",
+          "unit": 1
+        }
+      ],
+      "position": [
+        -2200.0,
+        0.0,
+        -3000.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "placementRelTo": "building",
+      "properties": {
+        "mass": 0,
+        "restitution": 0.3,
+        "friction": 0.0,
+        "MotionType": "ANIMATED"
+      },
+      "descr": "Box destination for the isolated WS2 test."
+    },
+    {
+      "id": "WS2TestPart",
+      "type": "https://w3id.org/ontoeng/factory#Artifact",
+      "representations": [
+        {
+          "file": "Part.glb",
+          "unit": 1
+        }
+      ],
+      "position": [
+        -2484.06,
+        230.0,
+        -2566.57
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "placementRelTo": "building",
+      "properties": {
+        "mass": 1,
+        "restitution": 0.1,
+        "friction": 0.95,
+        "MotionType": "ANIMATED"
+      },
+      "descr": "Single test part; starts at the WS2 conveyor pickup target."
+    }
+  ],
+  "testConfig": {
+    "purpose": "Isolated WS2 linked pick-and-place tuning test",
+    "sampleConvention": "Per-link animationAdditive sequence with FPS 5; grippers use absolute animation sequences.",
+    "pickupWorldMm": [
+      -2484.06,
+      230.0,
+      -2566.57
+    ],
+    "liftWorldMm": [
+      -2484.06,
+      350.0,
+      -2566.57
+    ],
+    "liftClearanceMm": 120.0,
+    "boxReleaseWorldMm": [
+      -2280.0,
+      80.0,
+      -3180.0
+    ],
+    "partApproxSizeMm": [
+      61.3,
+      31.0,
+      57.1
+    ],
+    "sequenceDurationMs": 10200
+  }
+}
