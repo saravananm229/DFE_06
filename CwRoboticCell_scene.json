@@ -2,7 +2,7 @@
     "context": {
         "UnitOfMeasureScale": 0.01,
         "Zup": false,
-        "RepoPath": "repository/models/GLB/"
+        "RepoPath": ""
     },
     "scene": [
         "default_building",
