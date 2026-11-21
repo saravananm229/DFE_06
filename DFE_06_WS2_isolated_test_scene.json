@@ -245,11 +245,16 @@
       ],
       "position": [
         0,
-        -36.5,
+        -32.65,
         45
       ],
       "placementRelTo": "WS2.EndEffector",
-      "parentObject": "WS2.EndEffector"
+      "parentObject": "WS2.EndEffector",
+      "properties": {
+        "jawSide": "left",
+        "openPositionMm": -32.65,
+        "closedPositionMm": -30.65
+      }
     },
     {
       "id": "WS2.Gripper2",
@@ -262,11 +267,16 @@
       ],
       "position": [
         0,
-        40.5,
+        32.65,
         45
       ],
       "placementRelTo": "WS2.EndEffector",
-      "parentObject": "WS2.EndEffector"
+      "parentObject": "WS2.EndEffector",
+      "properties": {
+        "jawSide": "right",
+        "openPositionMm": 32.65,
+        "closedPositionMm": 30.65
+      }
     },
     {
       "id": "WS2.Workholding",
@@ -371,7 +381,7 @@
   ],
   "testConfig": {
     "purpose": "Isolated WS2 linked pick-and-place tuning test",
-    "sampleConvention": "Per-link animationAdditive sequence with FPS 5; grippers use absolute animation sequences.",
+    "sampleConvention": "Per-link animationAdditive sequence with FPS 5; grippers use absolute local y-axis positions.",
     "pickupWorldMm": [
       -2484.06,
       230.0,
@@ -382,16 +392,95 @@
       350.0,
       -2566.57
     ],
-    "liftClearanceMm": 120.0,
-    "boxReleaseWorldMm": [
-      -2280.0,
-      80.0,
-      -3180.0
+    "pickupRetractWorldMm": [
+      -2484.06,
+      350.0,
+      -2566.57
     ],
+    "safeTransferHeightMm": 450.0,
+    "safeTransferWorldMm": [
+      -2200.0,
+      450.0,
+      -3000.0
+    ],
+    "boxApproachWorldMm": [
+      -2200.0,
+      350.0,
+      -3000.0
+    ],
+    "boxReleaseWorldMm": [
+      -2200.0,
+      250.0,
+      -3000.0
+    ],
+    "pickupLiftClearanceMm": 120.0,
+    "boxTopClearanceMm": 250.0,
+    "horizontalTransferMinimumHeightMm": 450.0,
+    "gripperJawGapOpenMm": 65.3,
+    "gripperJawGapClosedMm": 61.3,
+    "gripperPerJawGraspClearanceMm": 2.0,
+    "collisionCheck": {
+      "conveyorPickupMinClearanceMm": 120.0,
+      "boxPlacementMinClearanceMm": 250.0,
+      "status": "model-parameter-defined; live mesh contact not yet replayed"
+    },
+    "fkValidation": {
+      "pickupTargetWorldMm": [
+        -2484.06,
+        230.0,
+        -2566.57
+      ],
+      "placeTargetWorldMm": [
+        -2200.0,
+        250.0,
+        -3000.0
+      ],
+      "status": "Approximate hierarchy/kinematic metadata cannot substitute for renderer FK; live replay required",
+      "liveMeshCollisionStatus": "UNVERIFIED",
+      "pickupTargetPreserved": true
+    },
     "partApproxSizeMm": [
       61.3,
       31.0,
       57.1
+    ],
+    "measuredPartWidthMm": 61.3,
+    "measuredPartWidthSource": "Existing isolated-test metadata; direct GLB mesh bounds were not available in this workspace",
+    "actualLinkOffsetsMm": {
+      "baseToLink1": [0.0, 86.05, 0.0],
+      "link1ToLink2": [0.0, 65.85, 54.0],
+      "link2ToLink3": [0.0, 243.65, 23.6],
+      "link3ToLink4": [0.0, 213.0, -8.0],
+      "link4ToLink5": [0.0, 42.6, 40.8],
+      "link5ToLink6": [0.0, 40.8, 42.6],
+      "link6ToEndEffector": [0.0, 0.0, 38.0]
+    },
+    "jointPosePath": [
+      {
+        "phase": "rest",
+        "timeMs": 0,
+        "rotationsRad": [0.556, -0.78, 0.482, -1.272, 1.571, 0.55]
+      },
+      {
+        "phase": "pickup_retract",
+        "timeMs": 1800,
+        "rotationsRad": [0.556, -0.78, 0.482, -1.272, 1.571, 0.55]
+      },
+      {
+        "phase": "safe_transfer",
+        "timeMs": 5200,
+        "rotationsRad": [0.556, -0.78, 0.482, -1.272, 1.571, 0.55]
+      },
+      {
+        "phase": "box_approach",
+        "timeMs": 8400,
+        "rotationsRad": [0.556, -0.78, 0.482, -1.272, 1.571, 0.55]
+      },
+      {
+        "phase": "box_release",
+        "timeMs": 10200,
+        "rotationsRad": [0.556, -0.78, 0.482, -1.272, 1.571, 0.55]
+      }
     ],
     "sequenceDurationMs": 10200
   }
