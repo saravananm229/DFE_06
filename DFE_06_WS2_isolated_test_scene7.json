@@ -2,7 +2,7 @@
   "context": {
     "UnitOfMeasureScale": 0.001,
     "Zup": false,
-    "RepoPath": ""
+    "RepoPath": "https://difactory.github.io/repository/models/PickPlaceCell/"
   },
   "scene": [
     "building",
@@ -49,7 +49,7 @@
         -1.5767,
         0
       ],
-      "descr": "WS2 isolated linked pick-and-place test; lift target Y=350 mm."
+      "descr": "WS2 linked pick-and-place final test; project millimetre coordinates."
     },
     {
       "id": "WS2.Robot",
@@ -253,7 +253,7 @@
       "properties": {
         "jawSide": "left",
         "openPositionMm": -32.65,
-        "closedPositionMm": -30.65
+        "closedPositionMm": -30.625
       }
     },
     {
@@ -275,7 +275,7 @@
       "properties": {
         "jawSide": "right",
         "openPositionMm": 32.65,
-        "closedPositionMm": 30.65
+        "closedPositionMm": 30.625
       }
     },
     {
@@ -348,7 +348,7 @@
         "friction": 0.0,
         "MotionType": "ANIMATED"
       },
-      "descr": "Box destination for the isolated WS2 test."
+      "descr": "Box_large.glb destination; release the part at [-2200,12,-3000] mm."
     },
     {
       "id": "WS2TestPart",
@@ -376,12 +376,12 @@
         "friction": 0.95,
         "MotionType": "ANIMATED"
       },
-      "descr": "Single test part; starts at the WS2 conveyor pickup target."
+      "descr": "Part.glb mesh-bounds measured; initial center is the exact WS2 pickup target."
     }
   ],
   "testConfig": {
-    "purpose": "Isolated WS2 linked pick-and-place tuning test",
-    "sampleConvention": "Five-FPS JSON sequences; rotation vectors are local XYZ radians; joint animation is additive; track actions start at 1.5 seconds per the working workbook.",
+    "purpose": "Final isolated WS2 linked pick-and-place adaptation",
+    "sampleConvention": "Five-FPS JSON sequences; rotation vectors are local XYZ radians; additive samples are deltas from each scene rotation; timestamps are milliseconds.",
     "pickupWorldMm": [
       -2484.06,
       230.0,
@@ -424,15 +424,15 @@
     "boxFinalDropMeaning": "Approach remains at Y=350 mm; descend vertically to the user-specified Y=12 mm placement pose.",
     "horizontalTransferMinimumHeightMm": 450.0,
     "gripperJawGapOpenMm": 65.3,
-    "gripperJawGapClosedMm": 61.3,
-    "gripperPerJawGraspClearanceMm": 2.0,
+    "gripperJawGapClosedMm": 61.25,
+    "gripperPerJawGraspClearanceMm": 2.025,
     "collisionCheck": {
       "conveyorPickupMinClearanceMm": 120.0,
       "boxPlacementMinClearanceMm": 250.0,
-      "status": "model-parameter-defined; live mesh contact not yet replayed"
+      "status": "Waypoint centerline clearance encoded; live mesh collision not replayed."
     },
     "fkValidation": {
-      "method": "Numerical FK from supplied WS2 parent transforms, actual link offsets, and six local revolute axes.",
+      "method": "Numerical FK from supplied WS2 parent transforms and six local revolute axes; position waypoints solved with jaw axis aligned to measured Part.glb X width.",
       "pickupTargetWorldMm": [
         -2484.06,
         230.0,
@@ -443,22 +443,19 @@
         12.0,
         -3000.0
       ],
-      "initialToolWorldMm": [
-        -2484.148274,
-        350.190408,
-        -2566.66768
-      ],
       "maxCartesianSampleErrorMm": 0.231493,
+      "maxGripperAxisError": 0.000199,
+      "maxFrameJointDeltaRad": 0.468695,
       "rotationFieldConvention": "XYZ Euler component vectors in radians; animationAdditive samples contain local-axis delta from the scene rotation.",
-      "liveRendererAndMeshCollisionReplay": "UNVERIFIED; the hosted animation file returns 404 and GLB runtime playback could not be exercised."
+      "liveRendererAndMeshCollisionReplay": "UNVERIFIED; local assets and JSON only; VEB scene/animation deployment not available in this worktree."
     },
     "partApproxSizeMm": [
-      61.3,
-      31.0,
-      57.1
+      61.250003,
+      31.015688,
+      57.055258
     ],
-    "measuredPartWidthMm": 61.3,
-    "measuredPartWidthSource": "Existing isolated-test metadata; direct GLB mesh bounds were not available in this workspace",
+    "measuredPartWidthMm": 61.250003,
+    "measuredPartWidthSource": "Part.glb published asset vertex bounds; local X extent 61.250003 mm.",
     "actualLinkOffsetsMm": {
       "baseToLink1": [
         0.0,
@@ -498,7 +495,6 @@
     },
     "jointPosePath": [
       {
-        "phase": "rest",
         "timeMs": 1500,
         "toolWorldMm": [
           -2484.06,
@@ -512,10 +508,180 @@
           -1.272,
           1.571,
           0.55
-        ]
+        ],
+        "phase": "approach"
       },
       {
-        "phase": "pickup",
+        "timeMs": 1700,
+        "toolWorldMm": [
+          -2484.06,
+          339.090909,
+          -2566.57
+        ],
+        "jointRotationsRad": [
+          0.62168424,
+          -0.84102895,
+          0.58364343,
+          -1.37163085,
+          1.45632228,
+          0.47626659
+        ],
+        "phase": "approach"
+      },
+      {
+        "timeMs": 1900,
+        "toolWorldMm": [
+          -2484.06,
+          328.181818,
+          -2566.57
+        ],
+        "jointRotationsRad": [
+          0.6649958,
+          -0.92575335,
+          0.75063951,
+          -1.47024583,
+          1.38145313,
+          0.38055377
+        ],
+        "phase": "approach"
+      },
+      {
+        "timeMs": 2100,
+        "toolWorldMm": [
+          -2484.06,
+          317.272727,
+          -2566.57
+        ],
+        "jointRotationsRad": [
+          0.68399844,
+          -1.00511768,
+          0.91474249,
+          -1.5375297,
+          1.34853381,
+          0.25606023
+        ],
+        "phase": "approach"
+      },
+      {
+        "timeMs": 2300,
+        "toolWorldMm": [
+          -2484.06,
+          306.363636,
+          -2566.57
+        ],
+        "jointRotationsRad": [
+          0.69244587,
+          -1.07497185,
+          1.05987167,
+          -1.58325004,
+          1.33325715,
+          0.11862859
+        ],
+        "phase": "approach"
+      },
+      {
+        "timeMs": 2500,
+        "toolWorldMm": [
+          -2484.06,
+          295.454545,
+          -2566.57
+        ],
+        "jointRotationsRad": [
+          0.6952329,
+          -1.13801545,
+          1.1890386,
+          -1.61523738,
+          1.32703982,
+          -0.02547451
+        ],
+        "phase": "approach"
+      },
+      {
+        "timeMs": 2700,
+        "toolWorldMm": [
+          -2484.06,
+          284.545455,
+          -2566.57
+        ],
+        "jointRotationsRad": [
+          0.69384737,
+          -1.19647076,
+          1.30567566,
+          -1.6372425,
+          1.32727795,
+          -0.17408407
+        ],
+        "phase": "approach"
+      },
+      {
+        "timeMs": 2900,
+        "toolWorldMm": [
+          -2484.06,
+          273.636364,
+          -2566.57
+        ],
+        "jointRotationsRad": [
+          0.68876954,
+          -1.25188418,
+          1.41209893,
+          -1.65120031,
+          1.33315005,
+          -0.32626064
+        ],
+        "phase": "approach"
+      },
+      {
+        "timeMs": 3100,
+        "toolWorldMm": [
+          -2484.06,
+          262.727273,
+          -2566.57
+        ],
+        "jointRotationsRad": [
+          0.67995696,
+          -1.30532211,
+          1.50948123,
+          -1.6580866,
+          1.34476875,
+          -0.48161863
+        ],
+        "phase": "approach"
+      },
+      {
+        "timeMs": 3300,
+        "toolWorldMm": [
+          -2484.06,
+          251.818182,
+          -2566.57
+        ],
+        "jointRotationsRad": [
+          0.66713226,
+          -1.35751829,
+          1.59800444,
+          -1.65846545,
+          1.36268731,
+          -0.63995412
+        ],
+        "phase": "approach"
+      },
+      {
+        "timeMs": 3500,
+        "toolWorldMm": [
+          -2484.06,
+          240.909091,
+          -2566.57
+        ],
+        "jointRotationsRad": [
+          0.64995553,
+          -1.40889432,
+          1.67685308,
+          -1.65284873,
+          1.38761264,
+          -0.8010664
+        ],
+        "phase": "approach"
+      },
+      {
         "timeMs": 3700,
         "toolWorldMm": [
           -2484.06,
@@ -523,16 +689,50 @@
           -2566.57
         ],
         "jointRotationsRad": [
-          0.531846,
-          -1.074839,
-          0.313297,
-          -1.456669,
-          1.614049,
-          0.552388
-        ]
+          0.62825458,
+          -1.45945265,
+          1.74409311,
+          -1.64206927,
+          1.42002316,
+          -0.96462134
+        ],
+        "phase": "pickup"
       },
       {
-        "phase": "pickup_retract",
+        "timeMs": 3900,
+        "toolWorldMm": [
+          -2484.06,
+          270.0,
+          -2566.57
+        ],
+        "jointRotationsRad": [
+          0.67948873,
+          -1.33673894,
+          1.69831373,
+          -1.6225951,
+          1.3321347,
+          -0.9346487
+        ],
+        "phase": "pickup_retract"
+      },
+      {
+        "timeMs": 4100,
+        "toolWorldMm": [
+          -2484.06,
+          310.0,
+          -2566.57
+        ],
+        "jointRotationsRad": [
+          0.73686829,
+          -1.22236027,
+          1.64124147,
+          -1.58826799,
+          1.23382001,
+          -0.90901554
+        ],
+        "phase": "pickup_retract"
+      },
+      {
         "timeMs": 4300,
         "toolWorldMm": [
           -2484.06,
@@ -540,33 +740,305 @@
           -2566.57
         ],
         "jointRotationsRad": [
-          0.552666,
-          -0.780526,
-          0.480851,
-          -1.269867,
-          1.577044,
-          0.549691
-        ]
+          0.79966629,
+          -1.11715841,
+          1.57521344,
+          -1.54059289,
+          1.12576197,
+          -0.88956549
+        ],
+        "phase": "pickup_retract"
       },
       {
-        "phase": "safe_clearance",
-        "timeMs": 4800,
+        "timeMs": 4500,
         "toolWorldMm": [
           -2484.06,
-          450.0,
+          390.0,
           -2566.57
         ],
         "jointRotationsRad": [
-          0.573252,
-          -0.656961,
-          0.582456,
-          -1.061995,
-          1.540712,
-          0.544205
-        ]
+          0.86647358,
+          -1.02220368,
+          1.50313806,
+          -1.4795766,
+          1.00886342,
+          -0.87960056
+        ],
+        "phase": "pickup_retract"
       },
       {
-        "phase": "safe_transfer",
+        "timeMs": 4700,
+        "toolWorldMm": [
+          -2484.06,
+          430.0,
+          -2566.57
+        ],
+        "jointRotationsRad": [
+          0.93533577,
+          -0.93880819,
+          1.42843669,
+          -1.40297001,
+          0.884905,
+          -0.88375214
+        ],
+        "phase": "pickup_retract"
+      },
+      {
+        "timeMs": 4900,
+        "toolWorldMm": [
+          -2474.896774,
+          450.0,
+          -2580.551613
+        ],
+        "jointRotationsRad": [
+          1.06542872,
+          -0.83380665,
+          1.34007244,
+          -1.47652187,
+          0.7818098,
+          -0.76767788
+        ],
+        "phase": "safe_transfer"
+      },
+      {
+        "timeMs": 5100,
+        "toolWorldMm": [
+          -2456.570323,
+          450.0,
+          -2608.514839
+        ],
+        "jointRotationsRad": [
+          1.24732018,
+          -0.68292576,
+          1.15608382,
+          -1.67666836,
+          0.76079092,
+          -0.48829756
+        ],
+        "phase": "safe_transfer"
+      },
+      {
+        "timeMs": 5300,
+        "toolWorldMm": [
+          -2438.243871,
+          450.0,
+          -2636.478065
+        ],
+        "jointRotationsRad": [
+          1.39690628,
+          -0.53904759,
+          0.90122426,
+          -1.76189245,
+          0.81808002,
+          -0.24754344
+        ],
+        "phase": "safe_transfer"
+      },
+      {
+        "timeMs": 5500,
+        "toolWorldMm": [
+          -2419.917419,
+          450.0,
+          -2664.44129
+        ],
+        "jointRotationsRad": [
+          1.53574185,
+          -0.41314738,
+          0.64191475,
+          -1.76649121,
+          0.89200985,
+          -0.05263936
+        ],
+        "phase": "safe_transfer"
+      },
+      {
+        "timeMs": 5700,
+        "toolWorldMm": [
+          -2401.590968,
+          450.0,
+          -2692.404516
+        ],
+        "jointRotationsRad": [
+          1.6855234,
+          -0.28918641,
+          0.37027237,
+          -1.73035191,
+          0.94809735,
+          0.13406711
+        ],
+        "phase": "safe_transfer"
+      },
+      {
+        "timeMs": 5900,
+        "toolWorldMm": [
+          -2383.264516,
+          450.0,
+          -2720.367742
+        ],
+        "jointRotationsRad": [
+          1.9595,
+          -0.1123932,
+          -0.01437959,
+          -1.76896656,
+          0.90023417,
+          0.49686395
+        ],
+        "phase": "safe_transfer"
+      },
+      {
+        "timeMs": 6100,
+        "toolWorldMm": [
+          -2364.938065,
+          450.0,
+          -2748.330968
+        ],
+        "jointRotationsRad": [
+          2.24553106,
+          -0.16031293,
+          -0.06175713,
+          -2.10817357,
+          0.8541655,
+          0.96555867
+        ],
+        "phase": "safe_transfer"
+      },
+      {
+        "timeMs": 6300,
+        "toolWorldMm": [
+          -2346.611613,
+          450.0,
+          -2776.294194
+        ],
+        "jointRotationsRad": [
+          2.35480155,
+          -0.2389667,
+          -0.09751204,
+          -2.21824653,
+          0.86925656,
+          1.16536959
+        ],
+        "phase": "safe_transfer"
+      },
+      {
+        "timeMs": 6500,
+        "toolWorldMm": [
+          -2328.285161,
+          450.0,
+          -2804.257419
+        ],
+        "jointRotationsRad": [
+          2.41820605,
+          -0.33305159,
+          -0.13634607,
+          -2.29874273,
+          0.87680879,
+          1.3252305
+        ],
+        "phase": "safe_transfer"
+      },
+      {
+        "timeMs": 6700,
+        "toolWorldMm": [
+          -2309.95871,
+          450.0,
+          -2832.220645
+        ],
+        "jointRotationsRad": [
+          2.453089,
+          -0.44319069,
+          -0.17885248,
+          -2.38651415,
+          0.88073836,
+          1.4858096
+        ],
+        "phase": "safe_transfer"
+      },
+      {
+        "timeMs": 6900,
+        "toolWorldMm": [
+          -2291.632258,
+          450.0,
+          -2860.183871
+        ],
+        "jointRotationsRad": [
+          2.46390758,
+          -0.56797746,
+          -0.22194964,
+          -2.49263865,
+          0.89207059,
+          1.65965431
+        ],
+        "phase": "safe_transfer"
+      },
+      {
+        "timeMs": 7100,
+        "toolWorldMm": [
+          -2273.305806,
+          450.0,
+          -2888.147097
+        ],
+        "jointRotationsRad": [
+          2.45253279,
+          -0.70179368,
+          -0.26125861,
+          -2.61636966,
+          0.92404099,
+          1.84574525
+        ],
+        "phase": "safe_transfer"
+      },
+      {
+        "timeMs": 7300,
+        "toolWorldMm": [
+          -2254.979355,
+          450.0,
+          -2916.110323
+        ],
+        "jointRotationsRad": [
+          2.42077666,
+          -0.83520403,
+          -0.29333758,
+          -2.75058553,
+          0.98880942,
+          2.03398475
+        ],
+        "phase": "safe_transfer"
+      },
+      {
+        "timeMs": 7500,
+        "toolWorldMm": [
+          -2236.652903,
+          450.0,
+          -2944.073548
+        ],
+        "jointRotationsRad": [
+          2.37010509,
+          -0.95841727,
+          -0.31498274,
+          -2.88902176,
+          1.09571868,
+          2.21179163
+        ],
+        "phase": "safe_transfer"
+      },
+      {
+        "timeMs": 7700,
+        "toolWorldMm": [
+          -2218.326452,
+          450.0,
+          -2972.036774
+        ],
+        "jointRotationsRad": [
+          2.30052179,
+          -1.06463447,
+          -0.32008936,
+          -3.03292356,
+          1.25323153,
+          2.37024526
+        ],
+        "phase": "safe_transfer"
+      },
+      {
         "timeMs": 7900,
         "toolWorldMm": [
           -2200.0,
@@ -574,16 +1046,50 @@
           -3000.0
         ],
         "jointRotationsRad": [
-          1.812739,
-          -0.812649,
-          0.533306,
-          -0.827758,
-          2.40863,
-          0.538712
-        ]
+          2.20860022,
+          -1.15127878,
+          -0.29449256,
+          -3.19739389,
+          1.47657689,
+          2.5064275
+        ],
+        "phase": "box_approach"
       },
       {
-        "phase": "box_approach",
+        "timeMs": 8100,
+        "toolWorldMm": [
+          -2200.0,
+          416.666667,
+          -3000.0
+        ],
+        "jointRotationsRad": [
+          2.24822948,
+          -1.19822557,
+          -0.31764343,
+          -3.0605338,
+          1.40183735,
+          2.45853017
+        ],
+        "phase": "box_approach"
+      },
+      {
+        "timeMs": 8300,
+        "toolWorldMm": [
+          -2200.0,
+          383.333333,
+          -3000.0
+        ],
+        "jointRotationsRad": [
+          2.27678559,
+          -1.24851295,
+          -0.33424815,
+          -2.93786591,
+          1.34834288,
+          2.42005122
+        ],
+        "phase": "box_approach"
+      },
+      {
         "timeMs": 8500,
         "toolWorldMm": [
           -2200.0,
@@ -591,16 +1097,169 @@
           -3000.0
         ],
         "jointRotationsRad": [
-          1.853141,
-          -0.905081,
-          0.426652,
-          -1.14077,
-          2.296018,
-          0.548268
-        ]
+          2.29621668,
+          -1.3028962,
+          -0.34779024,
+          -2.82769221,
+          1.31209073,
+          2.39149999
+        ],
+        "phase": "box_release"
       },
       {
-        "phase": "box_release",
+        "timeMs": 8700,
+        "toolWorldMm": [
+          -2200.0,
+          316.2,
+          -3000.0
+        ],
+        "jointRotationsRad": [
+          2.30672972,
+          -1.36493149,
+          -0.35849057,
+          -2.73055888,
+          1.2925036,
+          2.37519939
+        ],
+        "phase": "box_release"
+      },
+      {
+        "timeMs": 8900,
+        "toolWorldMm": [
+          -2200.0,
+          282.4,
+          -3000.0
+        ],
+        "jointRotationsRad": [
+          2.30596865,
+          -1.43924227,
+          -0.36172555,
+          -2.65468234,
+          1.2939247,
+          2.37635979
+        ],
+        "phase": "box_release"
+      },
+      {
+        "timeMs": 9100,
+        "toolWorldMm": [
+          -2200.0,
+          248.6,
+          -3000.0
+        ],
+        "jointRotationsRad": [
+          2.29072285,
+          -1.53361614,
+          -0.34634466,
+          -2.61079216,
+          1.32233937,
+          2.39978258
+        ],
+        "phase": "box_release"
+      },
+      {
+        "timeMs": 9300,
+        "toolWorldMm": [
+          -2200.0,
+          214.8,
+          -3000.0
+        ],
+        "jointRotationsRad": [
+          2.2545613,
+          -1.65717871,
+          -0.29324165,
+          -2.61427577,
+          1.38996011,
+          2.45031889
+        ],
+        "phase": "box_release"
+      },
+      {
+        "timeMs": 9500,
+        "toolWorldMm": [
+          -2200.0,
+          181.0,
+          -3000.0
+        ],
+        "jointRotationsRad": [
+          2.17969281,
+          -1.81142674,
+          -0.1919093,
+          -2.68230315,
+          1.53162082,
+          2.53809568
+        ],
+        "phase": "box_release"
+      },
+      {
+        "timeMs": 9700,
+        "toolWorldMm": [
+          -2200.0,
+          147.2,
+          -3000.0
+        ],
+        "jointRotationsRad": [
+          2.0385795,
+          -1.9453109,
+          -0.09499084,
+          -2.79425548,
+          1.81069455,
+          2.66495805
+        ],
+        "phase": "box_release"
+      },
+      {
+        "timeMs": 9900,
+        "toolWorldMm": [
+          -2200.0,
+          113.4,
+          -3000.0
+        ],
+        "jointRotationsRad": [
+          1.87958093,
+          -1.9938263,
+          -0.05028469,
+          -2.88230324,
+          2.16766378,
+          2.77263305
+        ],
+        "phase": "box_release"
+      },
+      {
+        "timeMs": 10100,
+        "toolWorldMm": [
+          -2200.0,
+          79.6,
+          -3000.0
+        ],
+        "jointRotationsRad": [
+          1.76592991,
+          -1.99015693,
+          -0.03431705,
+          -2.94555818,
+          2.49701381,
+          2.82317408
+        ],
+        "phase": "box_release"
+      },
+      {
+        "timeMs": 10300,
+        "toolWorldMm": [
+          -2200.0,
+          45.8,
+          -3000.0
+        ],
+        "jointRotationsRad": [
+          1.7034949,
+          -1.97672183,
+          -0.04412224,
+          -3.02776037,
+          2.77297374,
+          2.78313324
+        ],
+        "phase": "box_release"
+      },
+      {
         "timeMs": 10500,
         "toolWorldMm": [
           -2200.0,
@@ -608,33 +1267,169 @@
           -3000.0
         ],
         "jointRotationsRad": [
-          1.913533,
-          -1.620897,
-          0.146759,
-          -1.138058,
-          2.144861,
-          0.541584
-        ]
+          1.68085776,
+          -2.00671068,
+          -0.08297154,
+          -3.25351752,
+          2.96597866,
+          2.50345117
+        ],
+        "phase": "box_release"
       },
       {
-        "phase": "post_release_retract",
-        "timeMs": 11500,
+        "timeMs": 10700,
         "toolWorldMm": [
           -2200.0,
-          350.0,
+          45.8,
           -3000.0
         ],
         "jointRotationsRad": [
-          1.854341,
-          -0.902521,
-          0.422367,
-          -1.138506,
-          2.292847,
-          0.547486
-        ]
+          1.7034949,
+          -1.97672183,
+          -0.04412224,
+          -3.02776037,
+          2.77297374,
+          2.78313324
+        ],
+        "phase": "post_release_retract"
       },
       {
-        "phase": "end",
+        "timeMs": 10900,
+        "toolWorldMm": [
+          -2200.0,
+          79.6,
+          -3000.0
+        ],
+        "jointRotationsRad": [
+          1.76592991,
+          -1.99015693,
+          -0.03431705,
+          -2.94555818,
+          2.49701381,
+          2.82317408
+        ],
+        "phase": "post_release_retract"
+      },
+      {
+        "timeMs": 11100,
+        "toolWorldMm": [
+          -2200.0,
+          113.4,
+          -3000.0
+        ],
+        "jointRotationsRad": [
+          1.87958093,
+          -1.9938263,
+          -0.05028469,
+          -2.88230324,
+          2.16766378,
+          2.77263305
+        ],
+        "phase": "post_release_retract"
+      },
+      {
+        "timeMs": 11300,
+        "toolWorldMm": [
+          -2200.0,
+          147.2,
+          -3000.0
+        ],
+        "jointRotationsRad": [
+          2.0385795,
+          -1.9453109,
+          -0.09499084,
+          -2.79425548,
+          1.81069455,
+          2.66495805
+        ],
+        "phase": "post_release_retract"
+      },
+      {
+        "timeMs": 11500,
+        "toolWorldMm": [
+          -2200.0,
+          181.0,
+          -3000.0
+        ],
+        "jointRotationsRad": [
+          2.17969281,
+          -1.81142674,
+          -0.1919093,
+          -2.68230315,
+          1.53162082,
+          2.53809568
+        ],
+        "phase": "post_release_retract"
+      },
+      {
+        "timeMs": 11700,
+        "toolWorldMm": [
+          -2200.0,
+          214.8,
+          -3000.0
+        ],
+        "jointRotationsRad": [
+          2.2545613,
+          -1.65717871,
+          -0.29324165,
+          -2.61427577,
+          1.38996011,
+          2.45031889
+        ],
+        "phase": "post_release_retract"
+      },
+      {
+        "timeMs": 11900,
+        "toolWorldMm": [
+          -2200.0,
+          248.6,
+          -3000.0
+        ],
+        "jointRotationsRad": [
+          2.29072285,
+          -1.53361614,
+          -0.34634466,
+          -2.61079216,
+          1.32233937,
+          2.39978258
+        ],
+        "phase": "post_release_retract"
+      },
+      {
+        "timeMs": 12100,
+        "toolWorldMm": [
+          -2200.0,
+          282.4,
+          -3000.0
+        ],
+        "jointRotationsRad": [
+          2.30596865,
+          -1.43924227,
+          -0.36172555,
+          -2.65468234,
+          1.2939247,
+          2.37635979
+        ],
+        "phase": "post_release_retract"
+      },
+      {
+        "timeMs": 12300,
+        "toolWorldMm": [
+          -2200.0,
+          316.2,
+          -3000.0
+        ],
+        "jointRotationsRad": [
+          2.30672972,
+          -1.36493149,
+          -0.35849057,
+          -2.73055888,
+          1.2925036,
+          2.37519939
+        ],
+        "phase": "post_release_retract"
+      },
+      {
         "timeMs": 12500,
         "toolWorldMm": [
           -2200.0,
@@ -642,13 +1437,14 @@
           -3000.0
         ],
         "jointRotationsRad": [
-          1.854341,
-          -0.902521,
-          0.422367,
-          -1.138506,
-          2.292847,
-          0.547486
-        ]
+          2.29621668,
+          -1.3028962,
+          -0.34779024,
+          -2.82769221,
+          1.31209073,
+          2.39149999
+        ],
+        "phase": "post_release_retract"
       }
     ],
     "sequenceDurationMs": 12500,
@@ -665,8 +1461,8 @@
     "sequenceFPS": 5,
     "sequenceStartTimeMs": 1500,
     "runtimeImport": {
-      "sceneFile": "DFE_06_WS2_isolated_test_scene5.json",
-      "animationFile": "DFE_06_WS2_isolated_test_anim5.json",
+      "sceneFile": "DFE_06_WS2_isolated_test_scene7.json",
+      "animationFile": "DFE_06_WS2_isolated_test_anim7.json",
       "animationNodeIds": [
         "WS2.link1",
         "WS2.link2",
@@ -675,7 +1471,32 @@
         "WS2.link5",
         "WS2.link6"
       ],
-      "deploymentStatus": "The currently hosted scene5 file is older than this workspace version; the hosted anim5 URL returns 404. Deploy and load both matching files together."
-    }
+      "animationUrlTemplate": "https://raw.githubusercontent.com/saravananm229/DFE_06/<published-ref>/DFE_06_WS2_isolated_test_anim7.json",
+      "vebQuerySuffix": "&inputanim=<published animation URL>",
+      "deploymentStatus": "Current main scene URL is HTTP 200 but stale; matching animation URL is HTTP 404. These worktree files are not deployed.",
+      "sceneUrlTemplate": "https://raw.githubusercontent.com/saravananm229/DFE_06/<published-ref>/DFE_06_WS2_isolated_test_scene7.json"
+    },
+    "partMeshBoundsMm": {
+      "min": [
+        -31.500001,
+        1.049997,
+        -28.527794
+      ],
+      "max": [
+        29.750002,
+        32.065685,
+        28.527464
+      ]
+    },
+    "sequenceLinkIds": [
+      "WS2.link1",
+      "WS2.link2",
+      "WS2.link3",
+      "WS2.link4",
+      "WS2.link5",
+      "WS2.link6"
+    ],
+    "gripperClosedGapMm": 61.25,
+    "gripperGapMeasurement": "Part.glb local X bounds, transformed mesh extent = 61.250003 mm; jaw axis aligned to global X at pickup."
   }
 }
