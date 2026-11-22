@@ -20,9 +20,20 @@
     "WS2.Gripper2",
     "WS2.Workholding",
     "WS2.Conveyor",
+    "WS2.Buffer1",
+    "WS2.Buffer2",
+    "WS2.Buffer3",
+    "WS2.Buffer4",
+    "WS2.Buffer5",
+    "WS2.Buffer6",
     "WS2.PalletPosition",
     "WS2TestBox",
-    "WS2TestPart"
+    "WS2TestPart",
+    "WS2TestPart02",
+    "WS2TestPart03",
+    "WS2TestPart04",
+    "WS2TestPart05",
+    "WS2TestPart06"
   ],
   "assets": [
     {
@@ -312,6 +323,117 @@
       "parentObject": "WS2"
     },
     {
+      "id": "WS2.Buffer1",
+      "type": "https://w3id.org/ontoeng/factory#BufferRestingPosition",
+      "position": [
+        0.0,
+        230.0,
+        -55.55
+      ],
+      "rotation": [
+        0.0,
+        1.5767,
+        0.0
+      ],
+      "placementRelTo": "WS2.Conveyor",
+      "parentObject": "WS2.Conveyor"
+    },
+    {
+      "id": "WS2.Buffer2",
+      "type": "https://w3id.org/ontoeng/factory#BufferRestingPosition",
+      "position": [
+        0.0,
+        230.0,
+        44.45
+      ],
+      "rotation": [
+        0.0,
+        1.5767,
+        0.0
+      ],
+      "placementRelTo": "WS2.Conveyor",
+      "parentObject": "WS2.Conveyor",
+      "connectedTo": [
+        "WS2.Buffer1"
+      ]
+    },
+    {
+      "id": "WS2.Buffer3",
+      "type": "https://w3id.org/ontoeng/factory#BufferRestingPosition",
+      "position": [
+        0.0,
+        230.0,
+        144.45
+      ],
+      "rotation": [
+        0.0,
+        1.5767,
+        0.0
+      ],
+      "placementRelTo": "WS2.Conveyor",
+      "parentObject": "WS2.Conveyor",
+      "connectedTo": [
+        "WS2.Buffer2"
+      ]
+    },
+    {
+      "id": "WS2.Buffer4",
+      "type": "https://w3id.org/ontoeng/factory#BufferRestingPosition",
+      "position": [
+        0.0,
+        230.0,
+        244.45
+      ],
+      "rotation": [
+        0.0,
+        1.5767,
+        0.0
+      ],
+      "placementRelTo": "WS2.Conveyor",
+      "parentObject": "WS2.Conveyor",
+      "connectedTo": [
+        "WS2.Buffer3"
+      ]
+    },
+    {
+      "id": "WS2.Buffer5",
+      "type": "https://w3id.org/ontoeng/factory#BufferRestingPosition",
+      "position": [
+        0.0,
+        230.0,
+        344.45
+      ],
+      "rotation": [
+        0.0,
+        1.5767,
+        0.0
+      ],
+      "placementRelTo": "WS2.Conveyor",
+      "parentObject": "WS2.Conveyor",
+      "connectedTo": [
+        "WS2.Buffer4"
+      ]
+    },
+    {
+      "id": "WS2.Buffer6",
+      "type": "https://w3id.org/ontoeng/factory#BufferRestingPosition",
+      "position": [
+        0.0,
+        230.0,
+        444.45
+      ],
+      "rotation": [
+        0.0,
+        1.5767,
+        0.0
+      ],
+      "placementRelTo": "WS2.Conveyor",
+      "parentObject": "WS2.Conveyor",
+      "connectedTo": [
+        "WS2.Buffer5"
+      ]
+    },
+    {
       "id": "WS2.PalletPosition",
       "type": "https://w3id.org/ontoeng/factory#PalletPosition",
       "position": [
@@ -377,6 +499,151 @@
         "MotionType": "ANIMATED"
       },
       "descr": "Part.glb mesh-bounds measured; initial center is the exact WS2 pickup target."
+    },
+    {
+      "id": "WS2TestPart02",
+      "type": "https://w3id.org/ontoeng/factory#Artifact",
+      "representations": [
+        {
+          "file": "Part.glb",
+          "unit": 1
+        }
+      ],
+      "position": [
+        0.0,
+        230.0,
+        44.45
+      ],
+      "rotation": [
+        0.0,
+        1.5767,
+        0.0
+      ],
+      "placementRelTo": "WS2.Conveyor",
+      "parentObject": "WS2.Conveyor",
+      "properties": {
+        "mass": 1,
+        "restitution": 0.1,
+        "friction": 0.95,
+        "MotionType": "ANIMATED"
+      },
+      "descr": "Part.glb queued at WS2.Buffer2 on WS2.Conveyor."
+    },
+    {
+      "id": "WS2TestPart03",
+      "type": "https://w3id.org/ontoeng/factory#Artifact",
+      "representations": [
+        {
+          "file": "Part.glb",
+          "unit": 1
+        }
+      ],
+      "position": [
+        0.0,
+        230.0,
+        144.45
+      ],
+      "rotation": [
+        0.0,
+        1.5767,
+        0.0
+      ],
+      "placementRelTo": "WS2.Conveyor",
+      "parentObject": "WS2.Conveyor",
+      "properties": {
+        "mass": 1,
+        "restitution": 0.1,
+        "friction": 0.95,
+        "MotionType": "ANIMATED"
+      },
+      "descr": "Part.glb queued at WS2.Buffer3 on WS2.Conveyor."
+    },
+    {
+      "id": "WS2TestPart04",
+      "type": "https://w3id.org/ontoeng/factory#Artifact",
+      "representations": [
+        {
+          "file": "Part.glb",
+          "unit": 1
+        }
+      ],
+      "position": [
+        0.0,
+        230.0,
+        244.45
+      ],
+      "rotation": [
+        0.0,
+        1.5767,
+        0.0
+      ],
+      "placementRelTo": "WS2.Conveyor",
+      "parentObject": "WS2.Conveyor",
+      "properties": {
+        "mass": 1,
+        "restitution": 0.1,
+        "friction": 0.95,
+        "MotionType": "ANIMATED"
+      },
+      "descr": "Part.glb queued at WS2.Buffer4 on WS2.Conveyor."
+    },
+    {
+      "id": "WS2TestPart05",
+      "type": "https://w3id.org/ontoeng/factory#Artifact",
+      "representations": [
+        {
+          "file": "Part.glb",
+          "unit": 1
+        }
+      ],
+      "position": [
+        0.0,
+        230.0,
+        344.45
+      ],
+      "rotation": [
+        0.0,
+        1.5767,
+        0.0
+      ],
+      "placementRelTo": "WS2.Conveyor",
+      "parentObject": "WS2.Conveyor",
+      "properties": {
+        "mass": 1,
+        "restitution": 0.1,
+        "friction": 0.95,
+        "MotionType": "ANIMATED"
+      },
+      "descr": "Part.glb queued at WS2.Buffer5 on WS2.Conveyor."
+    },
+    {
+      "id": "WS2TestPart06",
+      "type": "https://w3id.org/ontoeng/factory#Artifact",
+      "representations": [
+        {
+          "file": "Part.glb",
+          "unit": 1
+        }
+      ],
+      "position": [
+        0.0,
+        230.0,
+        444.45
+      ],
+      "rotation": [
+        0.0,
+        1.5767,
+        0.0
+      ],
+      "placementRelTo": "WS2.Conveyor",
+      "parentObject": "WS2.Conveyor",
+      "properties": {
+        "mass": 1,
+        "restitution": 0.1,
+        "friction": 0.95,
+        "MotionType": "ANIMATED"
+      },
+      "descr": "Part.glb queued at WS2.Buffer6 on WS2.Conveyor."
     }
   ],
   "testConfig": {
@@ -1469,11 +1736,20 @@
         "WS2.link3",
         "WS2.link4",
         "WS2.link5",
-        "WS2.link6"
+        "WS2.link6",
+        "WS2.Gripper1",
+        "WS2.Gripper2",
+        "WS2TestPart",
+        "WS2TestPart02",
+        "WS2TestPart03",
+        "WS2TestPart04",
+        "WS2TestPart05",
+        "WS2TestPart06",
+        "WS2TestBox"
       ],
       "animationUrlTemplate": "https://raw.githubusercontent.com/saravananm229/DFE_06/<published-ref>/DFE_06_WS2_isolated_test_anim7.json",
       "vebQuerySuffix": "&inputanim=<published animation URL>",
-      "deploymentStatus": "Current main scene URL is HTTP 200 but stale; matching animation URL is HTTP 404. These worktree files are not deployed.",
+      "deploymentStatus": "Updated scene, animation, and workbook are local only; no push or VEB deployment was performed. Hosted URLs may still serve stale data.",
       "sceneUrlTemplate": "https://raw.githubusercontent.com/saravananm229/DFE_06/<published-ref>/DFE_06_WS2_isolated_test_scene7.json"
     },
     "partMeshBoundsMm": {
@@ -1497,6 +1773,108 @@
       "WS2.link6"
     ],
     "gripperClosedGapMm": 61.25,
-    "gripperGapMeasurement": "Part.glb local X bounds, transformed mesh extent = 61.250003 mm; jaw axis aligned to global X at pickup."
+    "gripperGapMeasurement": "Part.glb local X bounds, transformed mesh extent = 61.250003 mm; jaw axis aligned to global X at pickup.",
+    "bufferStaging": {
+      "conveyor": "WS2.Conveyor",
+      "pickupTarget": "WS2.PalletPosition",
+      "units": "millimetres in the DFE local frame (UnitOfMeasureScale=0.001)",
+      "travelAxisLocal": "Z",
+      "feedDirectionLocal": "+Z; transfers toward pickup in -Z",
+      "pitchMm": 100.0,
+      "partBoundsMm": {
+        "min": [
+          -31.500001,
+          1.049997,
+          -28.527794
+        ],
+        "max": [
+          29.750002,
+          32.065685,
+          28.527464
+        ]
+      },
+      "partTravelExtentMm": 61.585769,
+      "clearGapBetweenPartBoundsMm": 38.414231,
+      "conveyorLocalZBoundsMm": [
+        -499.999999,
+        500.000032
+      ],
+      "farthestPartEndClearanceMm": 23.88213,
+      "slots": [
+        {
+          "id": "WS2.Buffer1",
+          "positionLocalMm": [
+            0.0,
+            230.0,
+            -55.55
+          ],
+          "initialPart": "WS2TestPart"
+        },
+        {
+          "id": "WS2.Buffer2",
+          "positionLocalMm": [
+            0.0,
+            230.0,
+            44.45
+          ],
+          "initialPart": "WS2TestPart02"
+        },
+        {
+          "id": "WS2.Buffer3",
+          "positionLocalMm": [
+            0.0,
+            230.0,
+            144.45
+          ],
+          "initialPart": "WS2TestPart03"
+        },
+        {
+          "id": "WS2.Buffer4",
+          "positionLocalMm": [
+            0.0,
+            230.0,
+            244.45
+          ],
+          "initialPart": "WS2TestPart04"
+        },
+        {
+          "id": "WS2.Buffer5",
+          "positionLocalMm": [
+            0.0,
+            230.0,
+            344.45
+          ],
+          "initialPart": "WS2TestPart05"
+        },
+        {
+          "id": "WS2.Buffer6",
+          "positionLocalMm": [
+            0.0,
+            230.0,
+            444.45
+          ],
+          "initialPart": "WS2TestPart06"
+        }
+      ],
+      "advanceScheduleMs": [
+        5100,
+        5400,
+        5700,
+        6000,
+        6300
+      ],
+      "ownershipRule": "Each transfer starts after the prior destination is vacated; 200 ms travel followed by a 100 ms clearance interval.",
+      "partCrossTrackExtentMm": 57.415862,
+      "partTravelExtentSource": "Part.glb min/max corners transformed by the queue part yaw +1.5767 rad into WS2.Conveyor local coordinates; this preserves the existing global part yaw against WS2 root yaw -1.5767 rad.",
+      "conveyorLocalXBoundsMm": [
+        -157.750607,
+        157.749403
+      ],
+      "crossTrackClearancePerSideMm": 129.042074,
+      "partTravelBoundsInConveyorFrameMm": {
+        "min": -29.917899,
+        "max": 31.66787
+      }
+    }
   }
 }
