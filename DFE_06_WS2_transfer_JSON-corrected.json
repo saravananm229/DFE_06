@@ -1,7 +1,7 @@
 {
   "context":  {
      "UnitOfMeasureScale":  0.001,
-    "Zup":  False,
+    "Zup": false,
      "RepoPath":  ""
   },
   "scene":  [
